@@ -1,8 +1,10 @@
 <template>
-  <div id="basicLayout">
+  <div id="userLayout">
     <a-layout style="min-height: 100vh">
       <a-layout-header class="header">
-        <globalHeader />
+        <img class="logo" src="../assets/cugb.png" />
+        <div>CUGB OJ</div>
+        <h2>用户登录</h2>
       </a-layout-header>
       <a-layout-content class="content">
         <router-view />
@@ -15,17 +17,25 @@
 </template>
 
 <style scoped>
-#basicLayout .header {
-  box-shadow: #eee 1px 1px 5px;
+#userLayout {
+  text-align: center;
 }
 
-#basicLayout .content {
-  background: linear-gradient(to right, #bbb, #fff);
+#userLayout .logo {
+  width: 64px;
+  height: 64px;
+}
+
+#userLayout .header {
+  margin-top: 16px;
+}
+
+#userLayout .content {
   margin-bottom: 16px;
   padding: 20px;
 }
 
-#basicLayout .footer {
+#userLayout .footer {
   background: #efefef;
   padding: 16px;
   position: sticky;
@@ -35,6 +45,4 @@
   text-align: center;
 }
 </style>
-<script setup lang="ts">
-import GlobalHeader from "@/components/GlobalHeader.vue";
-</script>
+<script setup lang="ts"></script>
